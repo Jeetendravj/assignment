@@ -1,0 +1,81 @@
+/* Style for the main container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Style for the form input elements */
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #208c08;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #0062cc;
+}
+
+/* Style for the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Style for the child component */
+.child-container {
+  background-color: #f2f2f2;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.child-container h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.child-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.child-row span {
+  font-weight: bold;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+  input, button {
+    width: 100%;
+  }
+}

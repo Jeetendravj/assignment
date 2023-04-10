@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Item Details</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  <style>
+    table {
+      margin-top: 1rem;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      text-align: center;
+      padding: 0.5rem;
+      border: 1px solid #dee2e6;
+    }
+    th {
+      background-color: #343a40;
+      color: #fff;
+    }
+    td:last-child {
+      font-weight: bold;
+    }
+    .total-section {
+      margin-top: 1rem;
+      padding: 1rem;
+      background-color: #f8f9fa;
+      border: 1px solid #dee2e6;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <button (click)="displaycart()">Display cart elements
+          
+        </button>
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let row of rows">
+              <td>{{ row.item }}</td>
+              <td>{{ row.quantity }}</td>
+              <td>{{ 'Rs' + row.price.toFixed(2) }}</td>
+              <td>{{ 'Rs' + row.total.toFixed(2) }}</td>
+            </tr>
+          </tbody>
+        </table>
+        
+
+       <div class="total-section">
+           
+           <p>Total products: {{ getTotalProducts() }}</p>
+           <p>Total sum: {{ getTotalSum() }}</p>
+           <p>Total quantity: {{ getTotalQuantity() }}</p>
+        </div>
+      </div>
+    </div>
+  
+
+ 
+
+
